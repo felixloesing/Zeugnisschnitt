@@ -11,8 +11,8 @@
 		DCA601BB1A9C7AE200DEF6C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA601BA1A9C7AE200DEF6C8 /* ViewController.swift */; };
 		DCA601BE1A9C7AE200DEF6C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA601BC1A9C7AE200DEF6C8 /* Main.storyboard */; };
 		DCA601C01A9C7AE200DEF6C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCA601BF1A9C7AE200DEF6C8 /* Images.xcassets */; };
-		DCA601C31A9C7AE200DEF6C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA601C11A9C7AE200DEF6C8 /* LaunchScreen.xib */; };
 		DCA601CF1A9C7AE300DEF6C8 /* NotenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA601CE1A9C7AE300DEF6C8 /* NotenTests.swift */; };
+		DCB4A9341C80BFF000E7E3C5 /* NotenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB4A9331C80BFF000E7E3C5 /* NotenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,10 +32,10 @@
 		DCA601BA1A9C7AE200DEF6C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DCA601BD1A9C7AE200DEF6C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DCA601BF1A9C7AE200DEF6C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		DCA601C21A9C7AE200DEF6C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DCA601C81A9C7AE300DEF6C8 /* NotenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA601CD1A9C7AE300DEF6C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCA601CE1A9C7AE300DEF6C8 /* NotenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotenTests.swift; sourceTree = "<group>"; };
+		DCB4A9331C80BFF000E7E3C5 /* NotenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +79,9 @@
 			children = (
 				DCA601B81A9C7AE200DEF6C8 /* AppDelegate.swift */,
 				DCA601BA1A9C7AE200DEF6C8 /* ViewController.swift */,
+				DCB4A9331C80BFF000E7E3C5 /* NotenViewController.swift */,
 				DCA601BC1A9C7AE200DEF6C8 /* Main.storyboard */,
 				DCA601BF1A9C7AE200DEF6C8 /* Images.xcassets */,
-				DCA601C11A9C7AE200DEF6C8 /* LaunchScreen.xib */,
 				DCA601B61A9C7AE200DEF6C8 /* Supporting Files */,
 			);
 			path = Noten;
@@ -156,7 +156,8 @@
 		DCA601AB1A9C7AE200DEF6C8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Felix Lösing";
 				TargetAttributes = {
 					DCA601B21A9C7AE200DEF6C8 = {
@@ -193,7 +194,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCA601BE1A9C7AE200DEF6C8 /* Main.storyboard in Resources */,
-				DCA601C31A9C7AE200DEF6C8 /* LaunchScreen.xib in Resources */,
 				DCA601C01A9C7AE200DEF6C8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCB4A9341C80BFF000E7E3C5 /* NotenViewController.swift in Sources */,
 				DCA601BB1A9C7AE200DEF6C8 /* ViewController.swift in Sources */,
 				DCA601B91A9C7AE200DEF6C8 /* AppDelegate.swift in Sources */,
 			);
@@ -244,14 +245,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		DCA601C11A9C7AE200DEF6C8 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DCA601C21A9C7AE200DEF6C8 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -275,6 +268,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -289,7 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -325,7 +319,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -336,8 +330,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Noten/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.floesing.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -346,8 +342,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Noten/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.floesing.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -356,16 +354,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = NotenTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.floesing.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Noten.app/Noten";
 			};
@@ -375,12 +371,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = NotenTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.floesing.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Noten.app/Noten";
 			};
@@ -405,6 +399,7 @@
 				DCA601D41A9C7AE300DEF6C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DCA601D51A9C7AE300DEF6C8 /* Build configuration list for PBXNativeTarget "NotenTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +408,7 @@
 				DCA601D71A9C7AE300DEF6C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
