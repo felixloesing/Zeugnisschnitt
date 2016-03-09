@@ -22,13 +22,46 @@ class ViewController: UIViewController {
     var punkteString = ""
     var punkteArray = [Double]()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController!.navigationBar.translucent = false
         self.tabBarController!.tabBar.translucent = false
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: "shareTapped")
         
+    }
+    
+    func shareTapped() {
         
+        if punkteAnzahl == 0 {
+            let alert = UIAlertController(title: "Fehler", message: "Bitte trage erst Noten ein, um diese zu teilen.", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+        } else {
+        
+            let screen = UIScreen.mainScreen()
+            
+            if let window = UIApplication.sharedApplication().keyWindow {
+                UIGraphicsBeginImageContextWithOptions(screen.bounds.size, false, 0);
+                window.drawViewHierarchyInRect(window.bounds, afterScreenUpdates: false)
+                let image = UIGraphicsGetImageFromCurrentImageContext();
+                UIGraphicsEndImageContext();
+                
+                
+                let textToShare = "Mein Zeugnisdurchschnitt ist \(notenSchnitt.text!) (Punkte: \(punkteSchnitt.text!))."
+                let objectsToShare = [textToShare, image]
+                let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+                
+                activityVC.excludedActivityTypes = [UIActivityTypePrint, UIActivityTypeAssignToContact,UIActivityTypeOpenInIBooks, UIActivityTypeAddToReadingList, UIActivityTypePostToVimeo]
+                    
+                self.presentViewController(activityVC, animated: true, completion: nil)
+            
+            }
+            
+        }
     }
     
     @IBAction func buttonPressed(sender: AnyObject) {

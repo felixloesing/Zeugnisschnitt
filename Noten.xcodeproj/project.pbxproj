@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC6EE3631C8F8F62002A190D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC6EE3621C8F8F62002A190D /* LaunchScreen.storyboard */; };
 		DCA601B91A9C7AE200DEF6C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA601B81A9C7AE200DEF6C8 /* AppDelegate.swift */; };
 		DCA601BB1A9C7AE200DEF6C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA601BA1A9C7AE200DEF6C8 /* ViewController.swift */; };
 		DCA601BE1A9C7AE200DEF6C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA601BC1A9C7AE200DEF6C8 /* Main.storyboard */; };
 		DCA601C01A9C7AE200DEF6C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCA601BF1A9C7AE200DEF6C8 /* Images.xcassets */; };
 		DCA601CF1A9C7AE300DEF6C8 /* NotenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA601CE1A9C7AE300DEF6C8 /* NotenTests.swift */; };
 		DCB4A9341C80BFF000E7E3C5 /* NotenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB4A9331C80BFF000E7E3C5 /* NotenViewController.swift */; };
+		DCD7B5F91C9004F200E00DE4 /* icon600.png in Resources */ = {isa = PBXBuildFile; fileRef = DCD7B5F81C9004F200E00DE4 /* icon600.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC6EE3621C8F8F62002A190D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCA601B31A9C7AE200DEF6C8 /* Noten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Noten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA601B71A9C7AE200DEF6C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCA601B81A9C7AE200DEF6C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 		DCA601CD1A9C7AE300DEF6C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCA601CE1A9C7AE300DEF6C8 /* NotenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotenTests.swift; sourceTree = "<group>"; };
 		DCB4A9331C80BFF000E7E3C5 /* NotenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotenViewController.swift; sourceTree = "<group>"; };
+		DCD7B5F81C9004F200E00DE4 /* icon600.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon600.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 				DCB4A9331C80BFF000E7E3C5 /* NotenViewController.swift */,
 				DCA601BC1A9C7AE200DEF6C8 /* Main.storyboard */,
 				DCA601BF1A9C7AE200DEF6C8 /* Images.xcassets */,
+				DC6EE3621C8F8F62002A190D /* LaunchScreen.storyboard */,
+				DCD7B5F81C9004F200E00DE4 /* icon600.png */,
 				DCA601B61A9C7AE200DEF6C8 /* Supporting Files */,
 			);
 			path = Noten;
@@ -162,6 +168,7 @@
 				TargetAttributes = {
 					DCA601B21A9C7AE200DEF6C8 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = C7H8ATK9UZ;
 					};
 					DCA601C71A9C7AE300DEF6C8 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -193,8 +200,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC6EE3631C8F8F62002A190D /* LaunchScreen.storyboard in Resources */,
 				DCA601BE1A9C7AE200DEF6C8 /* Main.storyboard in Resources */,
 				DCA601C01A9C7AE200DEF6C8 /* Images.xcassets in Resources */,
+				DCD7B5F91C9004F200E00DE4 /* icon600.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -319,7 +328,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
