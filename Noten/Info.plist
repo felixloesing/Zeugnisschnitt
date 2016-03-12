@@ -30,9 +30,44 @@
 	<array>
 		<string>armv7</string>
 	</array>
+    <key>UIApplicationShortcutItems</key>
+    <array>
+        <dict>
+            <key>UIApplicationShortcutItemIconFile</key>
+            <string>NotenTemplate</string>
+            <key>UIApplicationShortcutItemSubtitle</key>
+            <string></string>
+            <key>UIApplicationShortcutItemTitle</key>
+            <string>Noten berechnen</string>
+            <key>UIApplicationShortcutItemType</key>
+            <string>$(PRODUCT_BUNDLE_IDENTIFIER).OpenNoten</string>
+            <key>UIApplicationShortcutItemUserInfo</key>
+            <dict>
+                <key>version</key>
+                <string>3</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>UIApplicationShortcutItemIconFile</key>
+            <string>PunkteTemplate</string>
+            <key>UIApplicationShortcutItemSubtitle</key>
+            <string></string>
+            <key>UIApplicationShortcutItemTitle</key>
+            <string>Punkte berechnen</string>
+            <key>UIApplicationShortcutItemType</key>
+            <string>$(PRODUCT_BUNDLE_IDENTIFIER).OpenPunkte</string>
+            <key>UIApplicationShortcutItemUserInfo</key>
+            <dict>
+                <key>version</key>
+                <string>3</string>
+            </dict>
+        </dict>
+    </array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key></key>
+	<string></string>
 </dict>
 </plist>

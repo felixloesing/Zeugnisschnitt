@@ -11,6 +11,19 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    
+    enum ShortcutIdentifier: String {
+        case OpenPunkte
+        case OpenNoten
+        
+        init?(fullIdentifier: String) {
+            guard let shortIdentifier = fullIdentifier.componentsSeparatedByString(".").last else {
+                return nil
+            }
+            self.init(rawValue: shortIdentifier)
+        }
+    }
+    
     var window: UIWindow?
 
 
@@ -18,7 +31,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         self.window?.tintColor = UIColor(red:0.234, green:0.235, blue:0.234, alpha:1)
+        
+        
+        if let shortcutItem =
+            launchOptions?[UIApplicationLaunchOptionsShortcutItemKey]
+                as? UIApplicationShortcutItem {
+                    
+                    handleShortcut(shortcutItem)
+                    return false
+        }
+        
         return true
+    }
+    
+    func application(application: UIApplication,
+        performActionForShortcutItem shortcutItem: UIApplicationShortcutItem,
+        completionHandler: (Bool) -> Void) {
+            
+            completionHandler(handleShortcut(shortcutItem))
+    }
+    
+    private func handleShortcut(shortcutItem: UIApplicationShortcutItem) -> Bool {
+        let shortcutType = shortcutItem.type
+        guard let shortcutIdentifier = ShortcutIdentifier(fullIdentifier: shortcutType) else {
+            return false
+        }
+        return selectTabBarItemForIdentifier(shortcutIdentifier)
+    }
+    
+    private func selectTabBarItemForIdentifier(identifier: ShortcutIdentifier) -> Bool {
+        
+        guard let tabBarController = self.window?.rootViewController as? UITabBarController else {
+            return false
+        }
+        
+        switch (identifier) {
+        case .OpenNoten:
+            tabBarController.selectedIndex = 0
+            return true
+        case .OpenPunkte:
+            tabBarController.selectedIndex = 1
+            return true
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {
