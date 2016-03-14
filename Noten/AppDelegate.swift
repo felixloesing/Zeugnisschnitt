@@ -67,10 +67,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         switch (identifier) {
         case .OpenNoten:
-            tabBarController.selectedIndex = 0
+            tabBarController.selectedIndex = 1
             return true
         case .OpenPunkte:
-            tabBarController.selectedIndex = 1
+            tabBarController.selectedIndex = 0
             return true
         }
     }
