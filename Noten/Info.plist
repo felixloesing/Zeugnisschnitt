@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key></key>
+	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -15,13 +17,46 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1</string>
+	<string>1.2.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>46</string>
+	<string>92</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>NotenTemplate</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string></string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Noten berechnen</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).OpenNoten</string>
+			<key>UIApplicationShortcutItemUserInfo</key>
+			<dict>
+				<key>version</key>
+				<string>3</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>PunkteTemplate</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string></string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Punkte berechnen</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).OpenPunkte</string>
+			<key>UIApplicationShortcutItemUserInfo</key>
+			<dict>
+				<key>version</key>
+				<string>3</string>
+			</dict>
+		</dict>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -30,44 +65,9 @@
 	<array>
 		<string>armv7</string>
 	</array>
-    <key>UIApplicationShortcutItems</key>
-    <array>
-        <dict>
-            <key>UIApplicationShortcutItemIconFile</key>
-            <string>NotenTemplate</string>
-            <key>UIApplicationShortcutItemSubtitle</key>
-            <string></string>
-            <key>UIApplicationShortcutItemTitle</key>
-            <string>Noten berechnen</string>
-            <key>UIApplicationShortcutItemType</key>
-            <string>$(PRODUCT_BUNDLE_IDENTIFIER).OpenNoten</string>
-            <key>UIApplicationShortcutItemUserInfo</key>
-            <dict>
-                <key>version</key>
-                <string>3</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>UIApplicationShortcutItemIconFile</key>
-            <string>PunkteTemplate</string>
-            <key>UIApplicationShortcutItemSubtitle</key>
-            <string></string>
-            <key>UIApplicationShortcutItemTitle</key>
-            <string>Punkte berechnen</string>
-            <key>UIApplicationShortcutItemType</key>
-            <string>$(PRODUCT_BUNDLE_IDENTIFIER).OpenPunkte</string>
-            <key>UIApplicationShortcutItemUserInfo</key>
-            <dict>
-                <key>version</key>
-                <string>3</string>
-            </dict>
-        </dict>
-    </array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key></key>
-	<string></string>
 </dict>
 </plist>

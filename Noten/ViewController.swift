@@ -22,50 +22,88 @@ class ViewController: UIViewController {
     var punkteString = ""
     var punkteArray = [Double]()
     
+    let defaults = UserDefaults.standard
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController!.navigationBar.translucent = false
-        self.tabBarController!.tabBar.translucent = false
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: "shareTapped")
+        self.navigationController!.navigationBar.isTranslucent = false
+        self.tabBarController!.tabBar.isTranslucent = false
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(ViewController.shareTapped))
+        
+        
+        punkteGesamt = defaults.double(forKey: "punkteGesamt")
+        punkteAnzahl = defaults.integer(forKey: "punkteAnzahl")
+        punkte = defaults.double(forKey: "punkte")
+        //punkteString = defaults.objectForKey("punkteString") as! String
+        
+        punkteArray = defaults.object(forKey: "punkteArray") as? [Double] ?? [Double]()
+        
+        var notenSchnittDoubleDef = defaults.double(forKey: "notenSchnittDouble")
+        var punkteSchnittDoubleDef = defaults.double(forKey: "punkteSchnittDouble")
+        
+        for punkte in punkteArray {
+            let punkteInt = Int(punkte)
+            punkteString += String(punkteInt)+" "
+        }
+        
+        
+        
+        if punkteAnzahl == 0 {
+            punkteSchnittDoubleDef = 0.0
+            notenSchnittDoubleDef = 0.0
+        }
+        
+        if punkteSchnittDoubleDef == 0.0 {
+            notenSchnitt.text = ""
+            punkteSchnitt.text = ""
+        } else {
+            notenSchnitt.text = "\(notenSchnittDoubleDef)"
+            punkteSchnitt.text = "\(punkteSchnittDoubleDef)"
+        }
+        
+        label.text = punkteString
+        //notenSchnitt.text = "\(notenSchnittDoubleDef)"
+        anzahlLabel.text = "\(punkteAnzahl)"
+        //punkteSchnitt.text = "\(punkteSchnittDoubleDef)"
         
     }
     
     func shareTapped() {
         
         if punkteAnzahl == 0 {
-            let alert = UIAlertController(title: "Fehler", message: "Bitte trage erst Noten ein, um diese zu teilen.", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            let alert = UIAlertController(title: "Fehler", message: "Bitte trage erst Noten ein, um diese zu teilen.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
             
         } else {
         
-            let screen = UIScreen.mainScreen()
+            let screen = UIScreen.main
             
-            if let window = UIApplication.sharedApplication().keyWindow {
+            if let window = UIApplication.shared.keyWindow {
                 UIGraphicsBeginImageContextWithOptions(screen.bounds.size, false, 0);
-                window.drawViewHierarchyInRect(window.bounds, afterScreenUpdates: false)
+                window.drawHierarchy(in: window.bounds, afterScreenUpdates: false)
                 let image = UIGraphicsGetImageFromCurrentImageContext();
                 UIGraphicsEndImageContext();
                 
                 
                 let textToShare = "Mein Zeugnisdurchschnitt ist \(notenSchnitt.text!) (Punkte: \(punkteSchnitt.text!))."
-                let objectsToShare = [textToShare, image]
+                let objectsToShare = [textToShare, image!] as [Any]
                 let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
                 
-                activityVC.excludedActivityTypes = [UIActivityTypePrint, UIActivityTypeAssignToContact,UIActivityTypeOpenInIBooks, UIActivityTypeAddToReadingList, UIActivityTypePostToVimeo]
+                activityVC.excludedActivityTypes = [UIActivityType.print, UIActivityType.assignToContact,UIActivityType.openInIBooks, UIActivityType.addToReadingList, UIActivityType.postToVimeo]
                     
-                self.presentViewController(activityVC, animated: true, completion: nil)
+                self.present(activityVC, animated: true, completion: nil)
             
             }
             
         }
     }
     
-    @IBAction func buttonPressed(sender: AnyObject) {
-        punkteAnzahl++
+    @IBAction func buttonPressed(_ sender: AnyObject) {
+        punkteAnzahl += 1
         punkteGesamt += Noten[sender.tag]
         punkte += Double(sender.tag)
         punkteArray.append(Double(sender.tag))
@@ -78,8 +116,23 @@ class ViewController: UIViewController {
         notenSchnitt.text = "\(notenSchnittDouble)"
         anzahlLabel.text = "\(punkteAnzahl)"
         punkteSchnitt.text = "\(punkteSchnittDouble)"
+        
+        
+        defaults.set(punkteAnzahl, forKey: "punkteAnzahl")
+        defaults.set(punkteGesamt, forKey: "punkteGesamt")
+        defaults.set(punkte, forKey: "punkte")
+        
+        defaults.set(punkteString, forKey: "punkteString")
+        
+        let punkteArr = punkteArray
+        
+        defaults.set(punkteArr, forKey: "punkteArray")
+        
+        defaults.set(notenSchnittDouble, forKey: "notenSchnittDouble")
+        defaults.set(punkteSchnittDouble, forKey: "punkteSchnittDouble")
+        
     }
-    @IBAction func allClear(sender: AnyObject) {
+    @IBAction func allClear(_ sender: AnyObject) {
         label.text = ""
         notenSchnitt.text = ""
         punkteSchnitt.text = ""
@@ -89,11 +142,25 @@ class ViewController: UIViewController {
         punkte = 0.0
         punkteAnzahl = 0
         punkteArray.removeAll()
+        
+        
+        
+        defaults.set(punkteAnzahl, forKey: "punkteAnzahl")
+        defaults.set(punkteGesamt, forKey: "punkteGesamt")
+        defaults.set(punkte, forKey: "punkte")
+        
+        defaults.set(punkteString, forKey: "punkteString")
+        
+        let punkteArr = punkteArray
+        
+        defaults.set(punkteArr, forKey: "punkteArray")
+        
+        
     }
-    @IBAction func del(sender: AnyObject) {
+    @IBAction func del(_ sender: AnyObject) {
         if punkteAnzahl > 0 {
         
-        punkteAnzahl--
+        punkteAnzahl -= 1
         punkteGesamt -= Noten[Int(punkteArray.last!)]
         punkte -= punkteArray.last!
         punkteString = ""
@@ -118,8 +185,23 @@ class ViewController: UIViewController {
                 punkteSchnitt.text = ""
             }
         
+         
+            defaults.set(punkteAnzahl, forKey: "punkteAnzahl")
+            defaults.set(punkteGesamt, forKey: "punkteGesamt")
+            defaults.set(punkte, forKey: "punkte")
+            
+            defaults.set(punkteString, forKey: "punkteString")
+            
+            let punkteArr = punkteArray
+            
+            defaults.set(punkteArr, forKey: "punkteArray")
+            
+            defaults.set(notenSchnittDouble, forKey: "notenSchnittDouble")
+            defaults.set(punkteSchnittDouble, forKey: "punkteSchnittDouble")
             
         }
+        
+        
     }
 }
 
