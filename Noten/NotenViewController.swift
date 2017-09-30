@@ -61,7 +61,7 @@ class NotenViewController: UIViewController {
     }
 
     
-    func shareTapped() {
+    @objc func shareTapped() {
         
         
         if notenString == "" {

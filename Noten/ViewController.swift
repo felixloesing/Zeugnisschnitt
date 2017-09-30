@@ -70,7 +70,7 @@ class ViewController: UIViewController {
         
     }
     
-    func shareTapped() {
+    @objc func shareTapped() {
         
         if punkteAnzahl == 0 {
             let alert = UIAlertController(title: "Fehler", message: "Bitte trage erst Noten ein, um diese zu teilen.", preferredStyle: .alert)
