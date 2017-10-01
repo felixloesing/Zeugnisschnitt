@@ -1,0 +1,108 @@
+
+/* Class = "UINavigationItem"; title = "Notenschnitt"; ObjectID = "0TY-n1-1Ge"; */
+"0TY-n1-1Ge.title" = "Notenschnitt";
+
+/* Class = "UIButton"; normalTitle = "2"; ObjectID = "1ex-bq-xJ7"; */
+"1ex-bq-xJ7.normalTitle" = "2";
+
+/* Class = "UIButton"; normalTitle = "11"; ObjectID = "3Jh-2a-h9Q"; */
+"3Jh-2a-h9Q.normalTitle" = "11";
+
+/* Class = "UIButton"; normalTitle = "6"; ObjectID = "929-Fl-lZz"; */
+"929-Fl-lZz.normalTitle" = "6";
+
+/* Class = "UILabel"; text = "Noten ⌀"; ObjectID = "AGq-Qf-BbT"; */
+"AGq-Qf-BbT.text" = "Noten ⌀";
+
+/* Class = "UIButton"; normalTitle = "3"; ObjectID = "Chl-se-VOF"; */
+"Chl-se-VOF.normalTitle" = "3";
+
+/* Class = "UIButton"; normalTitle = "4"; ObjectID = "DWU-zo-UvL"; */
+"DWU-zo-UvL.normalTitle" = "4";
+
+/* Class = "UILabel"; text = "Anzahl"; ObjectID = "DiE-PJ-CHi"; */
+"DiE-PJ-CHi.text" = "Anzahl";
+
+/* Class = "UIButton"; normalTitle = "6"; ObjectID = "H4q-bE-Fuc"; */
+"H4q-bE-Fuc.normalTitle" = "6";
+
+/* Class = "UIButton"; normalTitle = "12"; ObjectID = "IyA-YU-UuM"; */
+"IyA-YU-UuM.normalTitle" = "12";
+
+/* Class = "UIButton"; normalTitle = "DEL"; ObjectID = "JNE-D9-LFQ"; */
+"JNE-D9-LFQ.normalTitle" = "DEL";
+
+/* Class = "UITabBarItem"; title = "Punkte"; ObjectID = "K8x-9f-TE6"; */
+"K8x-9f-TE6.title" = "Punkte";
+
+/* Class = "UILabel"; text = "Anzahl"; ObjectID = "L3P-mZ-esI"; */
+"L3P-mZ-esI.text" = "Anzahl";
+
+/* Class = "UIButton"; normalTitle = "1"; ObjectID = "Ne2-fZ-mhY"; */
+"Ne2-fZ-mhY.normalTitle" = "1";
+
+/* Class = "UIButton"; normalTitle = "3"; ObjectID = "PD8-TG-2rD"; */
+"PD8-TG-2rD.normalTitle" = "3";
+
+/* Class = "UITabBarItem"; title = "Noten"; ObjectID = "QWA-Y3-7mI"; */
+"QWA-Y3-7mI.title" = "Noten";
+
+/* Class = "UIButton"; normalTitle = "AC"; ObjectID = "QhO-rk-rcP"; */
+"QhO-rk-rcP.normalTitle" = "AC";
+
+/* Class = "UIButton"; normalTitle = "10"; ObjectID = "Uws-3o-Z92"; */
+"Uws-3o-Z92.normalTitle" = "10";
+
+/* Class = "UIButton"; normalTitle = "14"; ObjectID = "WAP-KJ-XXt"; */
+"WAP-KJ-XXt.normalTitle" = "14";
+
+/* Class = "UILabel"; text = "Punkte ⌀"; ObjectID = "WjG-UE-Nfp"; */
+"WjG-UE-Nfp.text" = "Punkte ⌀";
+
+/* Class = "UIButton"; normalTitle = "15"; ObjectID = "agU-vp-4wm"; */
+"agU-vp-4wm.normalTitle" = "15";
+
+/* Class = "UIButton"; normalTitle = "5"; ObjectID = "bd1-zm-V0q"; */
+"bd1-zm-V0q.normalTitle" = "5";
+
+/* Class = "UIButton"; normalTitle = "2"; ObjectID = "dAQ-F4-dax"; */
+"dAQ-F4-dax.normalTitle" = "2";
+
+/* Class = "UIButton"; normalTitle = "4"; ObjectID = "deZ-DA-kqK"; */
+"deZ-DA-kqK.normalTitle" = "4";
+
+/* Class = "UILabel"; text = "Noten ⌀"; ObjectID = "erd-Dw-Y3o"; */
+"erd-Dw-Y3o.text" = "Noten ⌀";
+
+/* Class = "UIButton"; normalTitle = "1"; ObjectID = "eyt-hv-O2a"; */
+"eyt-hv-O2a.normalTitle" = "1";
+
+/* Class = "UIButton"; normalTitle = "8"; ObjectID = "lA1-tZ-gcW"; */
+"lA1-tZ-gcW.normalTitle" = "8";
+
+/* Class = "UIButton"; normalTitle = "7"; ObjectID = "oFP-vy-k4J"; */
+"oFP-vy-k4J.normalTitle" = "7";
+
+/* Class = "UIButton"; normalTitle = "0"; ObjectID = "pLe-aJ-b39"; */
+"pLe-aJ-b39.normalTitle" = "0";
+
+/* Class = "UIButton"; normalTitle = "13"; ObjectID = "rR1-p2-tec"; */
+"rR1-p2-tec.normalTitle" = "13";
+
+/* Class = "UIButton"; normalTitle = "AC"; ObjectID = "s1C-Qr-O0K"; */
+"s1C-Qr-O0K.normalTitle" = "AC";
+
+/* Class = "UINavigationItem"; title = "Punkteschnitt"; ObjectID = "sdu-2g-fyt"; */
+"sdu-2g-fyt.title" = "Punkteschnitt";
+
+/* Class = "UIButton"; normalTitle = "5"; ObjectID = "tAT-xb-kIX"; */
+"tAT-xb-kIX.normalTitle" = "5";
+
+/* Class = "UILabel"; text = " "; ObjectID = "vG4-Wo-mv4"; */
+"vG4-Wo-mv4.text" = " ";
+
+/* Class = "UIButton"; normalTitle = "DEL"; ObjectID = "z3c-vB-FiC"; */
+"z3c-vB-FiC.normalTitle" = "DEL";
+
+/* Class = "UIButton"; normalTitle = "9"; ObjectID = "zBp-f6-TTz"; */
+"zBp-f6-TTz.normalTitle" = "9";
