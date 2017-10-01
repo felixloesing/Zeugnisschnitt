@@ -69,5 +69,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Wir müssen auf Deine Fotos zugreifen, um einen Screenshot zu speichern</string>
 </dict>
 </plist>
