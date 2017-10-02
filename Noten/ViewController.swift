@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StoreKit
 
 class ViewController: UIViewController {
 
@@ -22,11 +23,25 @@ class ViewController: UIViewController {
     var punkteString = ""
     var punkteArray = [Double]()
     
+    var startUps = 0
+    var promptForReview = false
+    var reviewTimer : Timer?
+    
     let defaults = UserDefaults.standard
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //prompt for review after a certain count of new app launches
+        startUps = defaults.integer(forKey: "startUps")
+        startUps = startUps+1
+        if startUps == 3 || startUps == 6 || startUps == 9 || startUps == 28 {
+            promptForReview = true
+        }
+        defaults.set(startUps, forKey: "startUps")
+        print(startUps)
+        
         
         self.navigationController!.navigationBar.isTranslucent = false
         self.tabBarController!.tabBar.isTranslucent = false
@@ -103,6 +118,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonPressed(_ sender: AnyObject) {
+        
+        //destroy old timer
+        if reviewTimer != nil {
+            reviewTimer?.invalidate()
+            //reviewTimer = nil
+        }
+        
+        
         punkteAnzahl += 1
         punkteGesamt += Noten[sender.tag]
         punkte += Double(sender.tag)
@@ -131,7 +154,27 @@ class ViewController: UIViewController {
         defaults.set(notenSchnittDouble, forKey: "notenSchnittDouble")
         defaults.set(punkteSchnittDouble, forKey: "punkteSchnittDouble")
         
+        //iOS Review Prompt after not clicking between 20 and 30 sec.
+        if promptForReview == true {
+            let shortestTime: UInt32 = 20
+            let longestTime: UInt32 = 30
+            let timeInterval = TimeInterval(exactly: arc4random_uniform(longestTime - shortestTime) + shortestTime)
+            
+            //if reviewTimer != nil {
+                reviewTimer = Timer.scheduledTimer(timeInterval: timeInterval!, target: self, selector: #selector(requestReview), userInfo: nil, repeats: false)
+            //}
+        }
+        
     }
+    
+    @objc func requestReview() {
+        SKStoreReviewController.requestReview()
+        print("prompted for review @startup=")
+        print(startUps)
+    }
+    
+    
+    
     @IBAction func allClear(_ sender: AnyObject) {
         label.text = ""
         notenSchnitt.text = ""
