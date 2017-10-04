@@ -168,7 +168,11 @@ class ViewController: UIViewController {
     }
     
     @objc func requestReview() {
-        SKStoreReviewController.requestReview()
+        if #available(iOS 10.3, *) {
+            SKStoreReviewController.requestReview()
+        } else {
+            // Fallback on earlier versions
+        }
         print("prompted for review @startup=")
         print(startUps)
     }
