@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Noten.xcodeproj">
+      location = "group:/Users/Felix/Documents/Noten/Noten/LaunchScreen.storyboard">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

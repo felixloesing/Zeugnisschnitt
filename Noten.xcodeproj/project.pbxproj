@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC23BFE220D6A0C90012B320 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DC23BFE120D6A0C90012B320 /* .gitignore */; };
-		DC6EE3631C8F8F62002A190D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC6EE3621C8F8F62002A190D /* LaunchScreen.storyboard */; };
+		DC23BFE520D6A1BA0012B320 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DC23BFE420D6A1B90012B320 /* .gitignore */; };
 		DCA601B91A9C7AE200DEF6C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA601B81A9C7AE200DEF6C8 /* AppDelegate.swift */; };
 		DCA601BB1A9C7AE200DEF6C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA601BA1A9C7AE200DEF6C8 /* ViewController.swift */; };
 		DCA601BE1A9C7AE200DEF6C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA601BC1A9C7AE200DEF6C8 /* Main.storyboard */; };
@@ -29,8 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DC23BFE120D6A0C90012B320 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		DC6EE3621C8F8F62002A190D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC23BFE320D6A18E0012B320 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = /Users/Felix/Documents/Noten/Noten/LaunchScreen.storyboard; sourceTree = "<absolute>"; };
+		DC23BFE420D6A1B90012B320 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		DCA601B31A9C7AE200DEF6C8 /* Noten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Noten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA601B71A9C7AE200DEF6C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCA601B81A9C7AE200DEF6C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,9 +87,9 @@
 				DCA601B81A9C7AE200DEF6C8 /* AppDelegate.swift */,
 				DCA601BA1A9C7AE200DEF6C8 /* ViewController.swift */,
 				DCB4A9331C80BFF000E7E3C5 /* NotenViewController.swift */,
+				DC23BFE320D6A18E0012B320 /* LaunchScreen.storyboard */,
 				DCA601BC1A9C7AE200DEF6C8 /* Main.storyboard */,
 				DCA601BF1A9C7AE200DEF6C8 /* Images.xcassets */,
-				DC6EE3621C8F8F62002A190D /* LaunchScreen.storyboard */,
 				DCD7B5F81C9004F200E00DE4 /* icon600_old.png */,
 				DCF0A1831F85322000E79902 /* icon600.png */,
 				DCA601B61A9C7AE200DEF6C8 /* Supporting Files */,
@@ -101,8 +100,8 @@
 		DCA601B61A9C7AE200DEF6C8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DC23BFE420D6A1B90012B320 /* .gitignore */,
 				DCA601B71A9C7AE200DEF6C8 /* Info.plist */,
-				DC23BFE120D6A0C90012B320 /* .gitignore */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -208,8 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC23BFE220D6A0C90012B320 /* .gitignore in Resources */,
-				DC6EE3631C8F8F62002A190D /* LaunchScreen.storyboard in Resources */,
+				DC23BFE520D6A1BA0012B320 /* .gitignore in Resources */,
 				DCA601BE1A9C7AE200DEF6C8 /* Main.storyboard in Resources */,
 				DCA601C01A9C7AE200DEF6C8 /* Images.xcassets in Resources */,
 				DCD7B5F91C9004F200E00DE4 /* icon600_old.png in Resources */,
