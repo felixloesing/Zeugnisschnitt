@@ -108,7 +108,7 @@ class ViewController: UIViewController {
                 let objectsToShare = [textToShare, image!] as [Any]
                 let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
                 
-                activityVC.excludedActivityTypes = [UIActivityType.print, UIActivityType.assignToContact,UIActivityType.openInIBooks, UIActivityType.addToReadingList, UIActivityType.postToVimeo]
+                activityVC.excludedActivityTypes = [UIActivity.ActivityType.print, UIActivity.ActivityType.assignToContact,UIActivity.ActivityType.openInIBooks, UIActivity.ActivityType.addToReadingList, UIActivity.ActivityType.postToVimeo]
                     
                 self.present(activityVC, animated: true, completion: nil)
             

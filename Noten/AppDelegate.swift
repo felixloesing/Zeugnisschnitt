@@ -27,14 +27,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         self.window?.tintColor = UIColor(red:0.234, green:0.235, blue:0.234, alpha:1)
         
         
         if let shortcutItem =
-            launchOptions?[UIApplicationLaunchOptionsKey.shortcutItem]
+            launchOptions?[UIApplication.LaunchOptionsKey.shortcutItem]
                 as? UIApplicationShortcutItem {
                     
                     _ = handleShortcut(shortcutItem)
