@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        self.window?.tintColor = UIColor(red:0.234, green:0.235, blue:0.234, alpha:1)
+        self.window?.tintColor = UIColor(named: "TabColor")
         
         
         if let shortcutItem =
